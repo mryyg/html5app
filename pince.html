@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+		<title>品策商业空间设计</title>
+		<style type="text/css">
+		/*顶部导航*/
+		
+			.navtop {
+				background: rgb(33,38,42);
+
+			}
+			.navtop .navbar-default {
+				background: none;
+				border: none;
+				height: 100%;
+
+			}
+			
+			
+			.navbar-default .navbar-nav>li>a {
+				color: #fff;
+				font: 16px "微软雅黑";
+				line-height: 4em;
+				margin-left: 35px;
+				
+			}
+			/*pc端*/
+			@media (min-width: 768px) {
+				.navtop {
+					padding:0 8%;
+					height: 90px;
+
+				}
+				.navbar-default .navbar-brand {
+				height: 90px;
+				}
+				.navbar-default .navbar-nav>li>a:hover {
+			    color: #000;
+			    background-color: rgb(255,234,0);
+				}
+			}
+			/*移动端*/
+			@media (max-width: 768px) {
+				.navtop {
+					padding:0 2%;
+					height: 45px;
+
+				}
+				.navbar-default .navbar-brand img {
+				height: 25px;
+				}
+				.navbar-default .navbar-nav>li>a {
+					height: 50px;
+				}
+				.navbar-default .navbar-nav {
+					background: rgb(33,38,42);
+					padding-bottom: 15px;
+					border: none;
+					margin-top: 0px;
+					position: relative;
+					z-index: 99;
+				}
+				.navbar-default .navbar-nav>li>a:hover {
+			    color: #fff;
+			    background:none;
+				}
+				.navbar-default .navbar-toggle {
+				    border:none;
+				}
+			}
+		/*banner*/
+			/*pc端*/
+			@media (min-width: 768px) {
+				.banner {
+					margin: 0px 5%;
+
+				}
+				.banner .carousel-indicators {
+					bottom: 10px;
+				}
+				.banner .carousel-indicators li {
+					width: 15px;
+					height: 5px;
+					border-radius: 0px;
+					background: #fff;
+					border: none;
+
+				}
+				.banner .carousel-indicators li.active {
+					background: rgb(255,234,0);
+				}
+			}	
+			/*移动端*/
+			@media (max-width: 768px) {
+				.banner {
+					margin: 0px 0%;
+				}
+				.banner .carousel-indicators {
+					display: none;
+				}
+			}
+			/*轮播图下方黄色块样式*/
+			.sectop {
+				padding: 45px 10%;
+				background: rgb(255,234,0);
+				text-align: center;
+			}
+			.sectopson p:nth-child(3) {
+				text-align: left;
+				line-height: 2em;
+			}
+			.sectopson p:nth-child(1) span {
+				display: inline-block;
+				width: 65px;
+				height: 65px;
+			}
+			.sectopson .iconsectop1 {
+				background: url(img/bg1.png) no-repeat 0 0/100% 100%;
+			}
+			.sectopson .iconsectop2 {
+				background: url(img/bg2.png) no-repeat 0 0/100% 100%;
+			}
+			.sectopson .iconsectop3 {
+				background: url(img/bg3.png) no-repeat 0 0/100% 100%;
+			}
+			.sectopson .iconsectop4 {
+				background: url(img/bg4.png) no-repeat 0 0/100% 100%;
+			}
+			.sectopson p:nth-child(2) a {
+				color: #000;
+			}
+			.sectopson p:nth-child(2) a:hover {
+				text-decoration: none;
+			}
+			/*移动端*/
+			@media (max-width: 768px) {
+				.sectop {
+				padding: 10px 2%;
+				background: rgb(255,234,0);
+				text-align: center;
+				}
+				.sectopson {
+					padding: 0px;
+				}
+				.sectopson p:nth-child(3) {
+				display: none;
+				}
+				.sectopson p:nth-child(1) span {
+				display: inline-block;
+				width: 25px;
+				height:25px;
+
+				}
+				.sectopson p:nth-child(2) {
+					font-size:1em;
+					margin: 0;
+				}
+			}
+			/*中间内容样式*/
+			.secsec {
+				padding: 25px 10% 0;
+			}
+			.secsectop div:nth-child(1) {
+				text-align: left;
+
+			}
+			.secsectop div:nth-child(1) h3 {
+				margin: 0;
+			}
+			.secsectop div:nth-child(2) {
+				text-align: right;
+
+			}
+			.secsectop div:nth-child(2) i {
+				width: 30px;
+				height: 30px;
+				border-radius: 50%;
+				background: #ddd;
+				line-height: 30px;
+				padding-right: 7px;
+			}
+			.secsectop div:nth-child(2) i:hover {
+				cursor: pointer;
+				background: rgb(255,234,0);
+			}
+			/*品策项目部分样式*/
+			.nav-tabs {
+				border: 2px #ddd solid;
+				margin:15px 0;
+				border-radius: 3px;
+			}
+			
+				.nav-tabs>li {
+					padding-right: 0;
+					padding-left: 0;
+					text-align: center;
+				}
+				.nav-tabs>li>a {
+					color: #000;
+					font-size: 12px;
+					padding-left: 5px;
+					padding-right: 5px;
+				}
+
+			.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+				border: none;
+				background: #ddd;
+				color: #000;
+				border-radius: 0;
+			}
+			 .tab-pane div.col-sm-6 {
+			 	
+				margin: 10px 0;
+				position: relative;
+				overflow: hidden;
+				
+			}
+			.tab-pane div.col-sm-6 img {
+				width: 100%;
+				
+			} 
+			/*PC端图片移上去动画*/
+			@media (min-width: 768px) {
+				.tab-pane div.col-sm-6 .imgc3 {
+					width: 100%;
+					height: 100%;
+					padding: 0 15px;
+					position: absolute;
+					top: 0;
+					left: 0;
+					
+				}
+				.tab-pane div.col-sm-6 .imgc3 div {
+					width: 100%;
+					height: 100%;
+					background: rgb(33,38,42);
+					z-index: 1;
+					transform: translateY(100%);
+					transition: all .4s ease-in;
+					color: rgb(255,234,0);
+					text-align: center;
+					padding: 30% 0;
+
+				}
+				.tab-pane div.col-sm-6:hover .imgc3 div {
+					transform: translateY(0);
+				}
+			}
+			/*合作流程*/
+			.coopflowbg {
+				width: 100%;
+				padding: 10px 15px;
+				background: rgb(233,234,235);
+				margin: 0;
+			}
+			.coopflowbg img {
+				width: 100%;
+			
+
+			}
+			/*品策空间*/
+			.pasona img {
+				width: 100%;
+
+			}
+			.pasona h4 {
+				padding: 10px 0;
+				border-bottom: 1px #aaa solid;
+			}
+			.pasona p {
+				font-size: 12px;
+			}
+			/*footer*/
+			footer .row {
+				background: rgb(86,90,96);
+				padding: 40px 11%;
+				color: #fff;
+			}
+			footer .row p:nth-child(1) {
+				font-size: 20px;
+			}
+			@media (max-width: 768px) {
+				footer .row p:nth-child(1) {
+					font-size: 14px;
+				}
+			}
+			footer .row p:nth-child(2) {
+				text-align: right;
+			}
+			footer .row:nth-child(2) {
+				background: rgb(255,255,255);
+			}
+			footer .row:nth-child(2) img {
+				width: 100%;
+				margin: 0;
+			}
+			/*点击回到顶部按钮样式*/
+			.fixed {
+			position: fixed;
+			right: 20px;
+			bottom: 35px;
+			width: 40px;
+			height: 40px;
+			background: url(img/icon_top.png) no-repeat -60px -80px;
+			border:none;
+			opacity: 0;
+			
+		}
+		</style>
+	</head>
+	<body>
+		<div class="contianer">
+		<!-- 顶部导航 -->
+		
+			<header class="row navtop" >
+			
+				<nav class="navbar navbar-default">
+				  <div class="container-fluid">
+				    <!-- Brand and toggle get grouped for better mobile display -->
+				    <div class="navbar-header">
+				      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="sr-only">Toggle navigation</span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+				      <a class="navbar-brand" href="#"><img src="img/logo.png"></a>
+				    </div>
+
+				    <!-- Collect the nav links, forms, and other content for toggling -->
+				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				      <ul class="nav navbar-nav">
+				        
+				        <li><a href="#">首页</a></li>
+				        <li><a href="#">关于品策</a></li>
+				        <li><a href="#">品策项目</a></li>
+				        <li><a href="#">品策空间</a></li>
+				        <li><a href="#">联系我们</a></li>
+				        
+				      </ul>
+				      
+				      
+				    </div><!-- /.navbar-collapse -->
+				  </div><!-- /.container-fluid -->
+				</nav>
+
+			</header>
+	
+			<!-- banner轮播 -->
+			<div class="row banner">
+			<div class="col-md-set"></div>
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+				    
+				  </ol>
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+				    
+				    
+				  </div>
+
+				  <!-- Controls -->
+				  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+				</div>
+			</div>
+			<section>
+				<div class="row sectop">
+					<div class="col-md-3 col-xs-3 sectopson">
+						<p><span class="iconsectop1"></span></p>
+						<p class="h3"><a href="">商业空间</a></p>
+						<p>提炼品牌核心价值和形象个性,站在品牌的高度进行设计,着重空间比例、轻重、动线、机能的关系,使空间与消费者发生情感共鸣。</p>
+					</div>
+					<div class="col-md-3 col-xs-3 sectopson">
+						<p><span class="iconsectop2"></span></p>
+						<p class="h3"><a href="">别墅大宅</a></p>
+						<p>定位于别墅大宅全案解决专家。人文、创意、智能这一品策设计理念的领导者。专注于打造高品质，精致的家居生活。品质生活，品策空间。</p>
+					</div>
+					<div class="col-md-3 col-xs-3 sectopson">
+						<p><span class="iconsectop3"></span></p>
+						<p class="h3"><a href="">品牌终端</a></p>
+						<p>以完整的品牌视角解构品牌形象,强调整合设计,与品牌识别的平面视觉、完美结合,重塑品牌形象,最终形成有感染力的终端形象体系。</p>
+					</div>
+					<div class="col-md-3 col-xs-3 sectopson">
+						<p><span class="iconsectop4"></span></p>
+						<p class="h3"><a href="">品牌巡展</a></p>
+						<p>使品牌动态展示生动化,增加展示空间冲击力、感染、启动力,通过色彩、环境、气氛和商品陈列,保持品牌传播的统一性和延续性。</p>
+					</div>
+				</div>
+				<!-- 中间内容 -->
+				<div class="secsec">
+					<div class="row secsectop">
+						<div class="col-xs-6">
+						<h3>品策项目</h3>
+						</div>
+						<div class="col-xs-6">
+							more <i class="glyphicon glyphicon-arrow-right"></i>	
+						</div>
+					</div>
+					<div class="row ">
+
+					  <!-- Nav tabs -->
+					  <ul class="nav nav-tabs" role="tablist">
+					    <li role="presentation" class="active col-xs-3"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">商业空间</a></li>
+					    <li role="presentation" class="col-xs-3"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">别墅大宅</a></li>
+					    <li role="presentation" class="col-xs-3"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">品牌终端</a></li>
+					    <li role="presentation" class="col-xs-3"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">品牌巡展</a></li>
+					  </ul>
+
+					  <!-- Tab panes -->
+					  <div class="tab-content">
+					    <div role="tabpanel" class="tab-pane active" id="home">
+					    	<div class="row">
+					    		<div class="col-sm-6 col-xs-6">
+					    			<img src="img/sec1.jpg">
+					    			<div class="imgc3">
+					    				<div>民权发投办公空间</div>
+					    			</div>
+					    		</div>
+					    		<div class="col-sm-6 col-xs-6">
+					    			<img src="img/sec2.jpg">
+					    			<div class="imgc3">
+					    				<div>世玺中心办公</div>
+					    			</div>
+					    		</div>
+					    	</div>
+					    	<div class="row">
+					    		<div class="col-sm-6 col-xs-6">
+					    			<img src="img/sec3.jpg">
+					    			<div class="imgc3">
+					    				<div>亿鑫珠宝城</div>
+					    			</div>
+					    		</div>
+					    		<div class="col-sm-6 col-xs-6">
+					    			<img src="img/sec4.jpg">
+					    			<div class="imgc3">
+					    				<div>“豫见澳洲”</div>
+					    			</div>
+					    		</div>
+					    	</div>
+					    	<div class="row">
+					    		<div class="col-sm-6 col-xs-6">
+					    			<img src="img/sec5.jpg">
+					    			<div class="imgc3">
+					    				<div>挽风</div>
+					    			</div>
+					    		</div>
+					    		<div class="col-sm-6 col-xs-6">
+					    			<img src="img/sec6.jpg">
+					    			<div class="imgc3">
+					    				<div>徽式会所</div>
+					    			</div>
+					    		</div>
+					    	</div>
+					    	<div class="row">
+					    		<div class="col-sm-6 col-xs-6">
+					    			<img src="img/sec7.jpg">
+					    			<div class="imgc3">
+					    				<div>隆睿物流</div>
+					    			</div>
+					    		</div>
+					    		<div class="col-sm-6 col-xs-6">
+					    			<img src="img/sec8.jpg">
+					    			<div class="imgc3">
+					    				<div>甘露禅茶</div>
+					    			</div>
+					    		</div>
+					    	</div>
+					    </div>
+					    <div role="tabpanel" class="tab-pane" id="profile">		<div class="row">
+					    		<div class="col-sm-6 col-xs-6">
+					    			<img src="img/sec9.jpg">
+					    			<div class="imgc3">
+					    				<div>民权发投办公空间</div>
+					    			</div>
+					    		</div>
+					    		<div class="col-sm-6 col-xs-6">
+					    			<img src="img/sec10.jpg">
+					    			<div class="imgc3">
+					    				<div>民权发投办公空间</div>
+					    			</div>
+					    		</div>
+					    	</div>
+					    </div>
+					    <div role="tabpanel" class="tab-pane" id="messages">
+					    	<div class="row">
+					    		<div class="col-sm-6 col-xs-6">
+					    			<img src="img/sec12.jpg">
+					    			<div class="imgc3">
+					    				<div>民权发投办公空间</div>
+					    			</div>
+					    		</div>
+					    		<div class="col-sm-6 col-xs-6">
+					    			<img src="img/sec12.jpg">
+					    			<div class="imgc3">
+					    				<div>民权发投办公空间</div>
+					    			</div>
+					    		</div>
+					    	</div>
+					    	<div class="row">
+					    		<div class="col-sm-6 col-xs-6">
+					    			<img src="img/sec12.jpg">
+					    			<div class="imgc3">
+					    				<div>民权发投办公空间</div>
+					    			</div>
+					    		</div>
+					    		
+					    	</div>
+					    </div>
+					    <div role="tabpanel" class="tab-pane" id="settings">
+					    	<div class="row">
+					    		<div class="col-sm-6 col-xs-6">
+					    			<img src="img/sec14.jpg">
+					    			<div class="imgc3">
+					    				<div>民权发投办公空间</div>
+					    			</div>
+					    		</div>
+					    		<div class="col-sm-6 col-xs-6">
+					    			<img src="img/sec15.jpg">
+					    			<div class="imgc3">
+					    				<div>民权发投办公空间</div>
+					    			</div>
+					    		</div>
+					    	</div>
+					    </div>
+					  </div>
+
+					</div>
+				</div>
+				<div class="row coopflowbg">
+					<img src="img/bgd1.png">
+				</div>
+				<div class="secsec">
+					<div class="row secsectop">
+						<div class="col-xs-6">
+						<h3>品策空间</h3>
+						</div>
+						<div class="col-xs-6">
+							more <i class="glyphicon glyphicon-arrow-right"></i>	
+						</div>
+					</div>
+					<div class="row pasona">
+						<div class="col-sm-3 col-xs-6">
+							<p><img src="img/xm1.jpg"></p>
+							<h4>PASONA集团总部</h4>
+							<p>2005年，Pasona曾在东京总部大楼的地下二楼设置水耕稻田，且因此成了头条新闻。2010年春，总部大楼移至丸之内后，将原本的稻田实验扩大变成“Urban Farm”（都市农场）</p>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+							<p><img src="img/xm2.jpg"></p>
+							<h4>PASONA集团总部</h4>
+							<p>2005年，Pasona曾在东京总部大楼的地下二楼设置水耕稻田，且因此成了头条新闻。2010年春，总部大楼移至丸之内后，将原本的稻田实验扩大变成“Urban Farm”（都市农场）</p>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+							<p><img src="img/xm3.jpg"></p>
+							<h4>PASONA集团总部</h4>
+							<p>2005年，Pasona曾在东京总部大楼的地下二楼设置水耕稻田，且因此成了头条新闻。2010年春，总部大楼移至丸之内后，将原本的稻田实验扩大变成“Urban Farm”（都市农场）</p>
+						</div>
+						<div class="col-sm-3 col-xs-6">
+							<p><img src="img/xm4.jpg"></p>
+							<h4>PASONA集团总部</h4>
+							<p>2005年，Pasona曾在东京总部大楼的地下二楼设置水耕稻田，且因此成了头条新闻。2010年春，总部大楼移至丸之内后，将原本的稻田实验扩大变成“Urban Farm”（都市农场）</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<footer>
+				<div class="row">
+					<p>设计即是冰与火交融，一半是感性和天马行空的想象，一半是理性的尺寸和充分的留白，像个优秀的作家一样，娓 娓讲出空间的故事。</p>
+					<p>--------Simrnons</p>
+				</div>
+				<div class="row">
+					<img src="img/bgd2.png">
+				</div>
+			</footer>
+		</div>
+		<button class="fixed">
+
+			</button>
+	</body>
+		<script src="js/jquery.js"></script>
+		<script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<!-- 轮播图路径函数 -->
+		<script src="js/underscore.js"></script>
+		<!-- 点的模板 -->
+		<script type="text/template" id="points">
+			<%_.each(model,function(v,i){%>
+				<li data-target="#carousel-example-generic" data-slide-to="<%=i%>" class="<%=i==0? 'active':''%>"></li>
+			<%})%>
+		</script>
+		<!-- 图片模板	 -->
+		<script type="text/template" id="imgs">
+		<%_.each(model,function(v,i){%>
+			<div class="item <%=i==0? 'active':''%>">
+		      <img src="<%=v.img%>" alt="...">
+		    </div>
+		  <%})%>
+		</script>
+		<script type="text/javascript">
+			$(".carousel").carousel({
+				  interval: 2000
+			});
+			
+			var data = [
+			{"img": "img/banner1.jpg"},
+			{"img": "img/banner2.jpg"},
+			{"img": "img/banner3.jpg"},
+			{"img": "img/banner4.jpg"}
+			
+		];
+		// 点模板的加工
+		var pointstemplate = _.template($("#points").html());
+		$(".carousel-indicators").html(pointstemplate({model:data}));
+		// 图片模板加工
+		var imgstemplate = _.template($("#imgs").html());
+		$(".carousel-inner").html(imgstemplate({model:data}));
+
+		// 点击回到顶部按钮函数
+		var btn=document.querySelector(".fixed");
+		var bod = document.querySelector("body");
+		window.onscroll = function (){
+			if (bod.scrollTop>=100) {
+				btn.style.opacity = "1";
+				btn.style.transition = "all 1s";
+			}
+			else {
+				btn.style.opacity = "0";
+				btn.style.transition = "all 1s";
+			}
+		}
+		btn.onclick=function(){
+			var aaa=bod.scrollTop;
+			var times = setInterval(function() {
+				aaa-=30;
+				bod.scrollTop=aaa;
+				if (aaa<=0) {
+					clearInterval(times);
+				}
+			},5);
+		}
+		</script>
+		
+</html>
